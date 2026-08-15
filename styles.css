@@ -114,68 +114,123 @@ max-width:100%;
   font-size: .94rem;
 }
 
-/* MOBILE */
+/* =========================================
+   RESPONSIVE / MOBILE
+   ========================================= */
 
 @media(max-width:920px){
-  .collaboration-grid {
-    grid-template-columns: 1fr;
-    {.menu-button{display:inline-block}.nav-links{position:absolute;top:76px;right:20px;width:min(285px,calc(100% - 40px));display:none;padding:18px;background:rgba(7,59,75,.97);border-radius:18px}.nav-links.open{display:grid}.feature-grid,.about-grid,.booking-grid,.location-grid,.sessions,.occasion-grid{grid-template-columns:1fr}.feature-caption{right:18px}.section-heading{display:block}.section-heading>p{margin-top:12px}.portrait,.feature-image{min-height:480px}}@media(max-width:580px){.container{width:min(100% - 28px,1160px)}.section{padding:78px 0}.hero{min-height:94vh}.hero-content{padding-bottom:66px}h1{font-size:clamp(3.4rem,16vw,5.1rem)}.hero-buttons,.button{width:100%}.scroll-cue{display:none}.brand span{font-size:1.08rem}.brand small{font-size:.53rem}.footer-grid{display:block}.footer-grid>p{margin-top:16px}}
-.video-embed {
-  width: 100%;
-  aspect-ratio: 16 / 10;
-  overflow: hidden;
-  background: #0b4f63;
-}
 
-.video-embed iframe {
-  width: 100%;
-  height: 100%;
-  display: block;
-  border: 0;
-}
-/* CREATIVE COLLABORATIONS - FINAL OVERRIDE */
+  .menu-button{
+    display:inline-block;
+  }
 
-.collaboration-grid{
-  display:grid !important;
-  grid-template-columns:repeat(3,minmax(0,1fr)) !important;
-  gap:26px !important;
-  align-items:stretch;
-}
+  .nav-links{
+    position:absolute;
+    top:76px;
+    right:20px;
+    width:min(285px,calc(100% - 40px));
+    display:none;
+    padding:18px;
+    background:rgba(7,59,75,.97);
+    border-radius:18px;
+  }
 
-.collaboration-card{
-  display:block !important;
-  overflow:hidden;
-  min-width:0;
-  border-radius:24px;
-  background:#ffffff;
-  border:1px solid rgba(23,111,136,.14);
-  box-shadow:0 16px 42px rgba(13,79,99,.08);
-}
+  .nav-links.open{
+    display:grid;
+  }
 
-.collaboration-video{
-  display:block !important;
-  width:100%;
-  overflow:hidden;
-  text-decoration:none;
-}
-
-.collaboration-thumb{
-  display:block !important;
-  position:relative !important;
-  width:100% !important;
-  height:auto !important;
-  aspect-ratio:16 / 10 !important;
-  background-size:cover !important;
-  background-position:center !important;
-}
-
-.collaboration-copy{
-  display:block;
-  padding:28px;
-}
-
-@media(max-width:920px){
+  .feature-grid,
+  .about-grid,
+  .booking-grid,
+  .location-grid,
+  .sessions,
+  .occasion-grid,
   .collaboration-grid{
     grid-template-columns:1fr !important;
   }
+
+  .feature-caption{
+    right:18px;
+  }
+
+  .section-heading{
+    display:block;
+  }
+
+  .section-heading>p{
+    margin-top:12px;
+  }
+
+  .portrait,
+  .feature-image{
+    min-height:480px;
+  }
+}
+
+
+@media(max-width:580px){
+
+  .container{
+    width:min(100% - 28px,1160px);
+  }
+
+  .section{
+    padding:78px 0;
+  }
+
+  .hero{
+    min-height:94vh;
+  }
+
+  .hero-content{
+    padding-bottom:66px;
+  }
+
+  h1{
+    font-size:clamp(3.4rem,16vw,5.1rem);
+  }
+
+  .hero-buttons,
+  .button{
+    width:100%;
+  }
+
+  .scroll-cue{
+    display:none;
+  }
+
+  .brand span{
+    font-size:1.08rem;
+  }
+
+  .brand small{
+    font-size:.53rem;
+  }
+
+  .footer-grid{
+    display:block;
+  }
+
+  .footer-grid>p{
+    margin-top:16px;
+  }
+}
+
+
+/* =========================================
+   YOUTUBE EMBEDS
+   ========================================= */
+
+.video-embed{
+  width:100%;
+  aspect-ratio:16 / 10;
+  overflow:hidden;
+  background:#0b4f63;
+}
+
+.video-embed iframe{
+  width:100%;
+  height:100%;
+  display:block;
+  border:0;
 }
