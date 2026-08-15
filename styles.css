@@ -133,3 +133,49 @@ max-width:100%;
   display: block;
   border: 0;
 }
+/* CREATIVE COLLABORATIONS - FINAL OVERRIDE */
+
+.collaboration-grid{
+  display:grid !important;
+  grid-template-columns:repeat(3,minmax(0,1fr)) !important;
+  gap:26px !important;
+  align-items:stretch;
+}
+
+.collaboration-card{
+  display:block !important;
+  overflow:hidden;
+  min-width:0;
+  border-radius:24px;
+  background:#ffffff;
+  border:1px solid rgba(23,111,136,.14);
+  box-shadow:0 16px 42px rgba(13,79,99,.08);
+}
+
+.collaboration-video{
+  display:block !important;
+  width:100%;
+  overflow:hidden;
+  text-decoration:none;
+}
+
+.collaboration-thumb{
+  display:block !important;
+  position:relative !important;
+  width:100% !important;
+  height:auto !important;
+  aspect-ratio:16 / 10 !important;
+  background-size:cover !important;
+  background-position:center !important;
+}
+
+.collaboration-copy{
+  display:block;
+  padding:28px;
+}
+
+@media(max-width:920px){
+  .collaboration-grid{
+    grid-template-columns:1fr !important;
+  }
+}
