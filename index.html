@@ -228,6 +228,32 @@
 </a></aside></div></section>
 </main>
 <footer class="footer"><div class="container footer-grid"><div><strong>Story Tree Collective</strong><p>Stories that grow. Roots that connect.</p></div><p>© <span id="year"></span> Nathan Davila</p></div></footer>
-<script src="script.js"></script>
+<div class="video-modal" id="video-modal" aria-hidden="true">
+
+  <div class="video-modal-backdrop"></div>
+
+  <div class="video-modal-dialog">
+
+    <button
+      class="video-modal-close"
+      type="button"
+      aria-label="Close video">
+      ×
+    </button>
+
+    <div class="video-modal-frame">
+      <iframe
+        id="video-modal-iframe"
+        src=""
+        title="Story Tree Collective video"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen>
+      </iframe>
+    </div>
+
+  </div>
+
+</div>
+  <script src="script.js"></script>
 </body>
 </html>
