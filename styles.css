@@ -331,3 +331,242 @@ body.modal-open{
     top:-48px;
   }
 }
+/* =========================================
+   FEATURED COLLABORATION — OAK TALK
+   ========================================= */
+
+.featured-collaboration{
+  background:#ffffff;
+}
+
+.featured-heading{
+  max-width:850px;
+  margin-bottom:55px;
+}
+
+.featured-heading h2{
+  margin-bottom:18px;
+}
+
+.featured-intro{
+  max-width:720px;
+  color:var(--muted);
+  font-size:1.08rem;
+}
+
+
+/* MAIN FEATURE LAYOUT */
+
+.featured-story{
+  display:grid;
+  grid-template-columns:minmax(260px,.7fr) minmax(0,1.3fr);
+  gap:65px;
+  align-items:start;
+}
+
+
+/* EVENT FLYER */
+
+.featured-flyer{
+  position:relative;
+}
+
+.featured-flyer img{
+  display:block;
+  width:100%;
+  height:auto;
+  border-radius:24px;
+  box-shadow:var(--shadow);
+}
+
+
+/* STORY */
+
+.featured-content{
+  min-width:0;
+}
+
+.featured-kicker{
+  margin-bottom:12px;
+  color:var(--ocean);
+  font-size:.68rem;
+  font-weight:600;
+  letter-spacing:.18em;
+  text-transform:uppercase;
+}
+
+.featured-content > h3{
+  max-width:700px;
+  margin-bottom:24px;
+  font-size:clamp(2rem,3.2vw,3.2rem);
+  line-height:1.08;
+}
+
+.featured-content > p{
+  max-width:720px;
+  color:var(--muted);
+  font-size:1.02rem;
+}
+
+
+/* VIDEO GRID */
+
+.featured-video-grid{
+  display:grid;
+  grid-template-columns:repeat(2,minmax(0,1fr));
+  gap:22px;
+  margin-top:38px;
+}
+
+
+/* VIDEO CARDS */
+
+.featured-video-card{
+  overflow:hidden;
+  min-width:0;
+  border:1px solid var(--line);
+  border-radius:22px;
+  background:var(--sky);
+  box-shadow:0 12px 35px rgba(18,83,100,.08);
+  transition:transform .35s ease,box-shadow .35s ease;
+}
+
+.featured-video-card:hover{
+  transform:translateY(-4px);
+  box-shadow:0 20px 45px rgba(18,83,100,.14);
+}
+
+.featured-video-link{
+  display:block;
+  width:100%;
+  overflow:hidden;
+  text-decoration:none;
+}
+
+.featured-video-thumb{
+  position:relative;
+  width:100%;
+  aspect-ratio:16 / 9;
+  background-size:cover;
+  background-position:center;
+  transition:transform .4s ease;
+}
+
+.featured-video-thumb::after{
+  content:"";
+  position:absolute;
+  inset:0;
+  background:linear-gradient(
+    to top,
+    rgba(7,59,75,.46),
+    rgba(7,59,75,.02)
+  );
+}
+
+.featured-video-card:hover .featured-video-thumb{
+  transform:scale(1.025);
+}
+
+
+/* PLAY BUTTON */
+
+.featured-video-play{
+  position:absolute;
+  z-index:2;
+  top:50%;
+  left:50%;
+  width:62px;
+  height:62px;
+  display:grid;
+  place-items:center;
+  transform:translate(-50%,-50%);
+  border:1px solid rgba(255,255,255,.88);
+  border-radius:50%;
+  color:#ffffff;
+  background:rgba(11,79,99,.48);
+  backdrop-filter:blur(5px);
+  font-size:1.15rem;
+  transition:transform .3s ease,background .3s ease;
+}
+
+.featured-video-card:hover .featured-video-play{
+  transform:translate(-50%,-50%) scale(1.08);
+  background:rgba(11,79,99,.78);
+}
+
+
+/* VIDEO COPY */
+
+.featured-video-copy{
+  padding:24px;
+}
+
+.featured-video-type{
+  margin-bottom:9px;
+  color:var(--ocean);
+  font-size:.62rem;
+  font-weight:600;
+  letter-spacing:.17em;
+  text-transform:uppercase;
+}
+
+.featured-video-copy h3{
+  margin-bottom:10px;
+  font-size:1.65rem;
+}
+
+.featured-video-copy > p:last-child{
+  margin-bottom:0;
+  color:var(--muted);
+  font-size:.88rem;
+}
+
+
+/* =========================================
+   FEATURED COLLABORATION — TABLET
+   ========================================= */
+
+@media(max-width:920px){
+
+  .featured-story{
+    grid-template-columns:minmax(220px,.75fr) minmax(0,1.25fr);
+    gap:35px;
+  }
+
+  .featured-video-grid{
+    grid-template-columns:1fr;
+  }
+
+}
+
+
+/* =========================================
+   FEATURED COLLABORATION — MOBILE
+   ========================================= */
+
+@media(max-width:680px){
+
+  .featured-heading{
+    margin-bottom:38px;
+  }
+
+  .featured-story{
+    grid-template-columns:1fr;
+    gap:42px;
+  }
+
+  .featured-flyer{
+    width:min(100%,380px);
+    margin:0 auto;
+  }
+
+  .featured-content > h3{
+    font-size:clamp(2rem,10vw,2.8rem);
+  }
+
+  .featured-video-grid{
+    grid-template-columns:1fr;
+    gap:20px;
+  }
+
+}
